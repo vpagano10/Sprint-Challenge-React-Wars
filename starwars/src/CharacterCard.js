@@ -1,12 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const CardDisplay = styled.div`
     margin: 4%;
     padding: 2%;
     background: darkslategray;
     color: khaki;
-    max-width: 25%;
+    border: 2px solid khaki;
+    width: 20%;
+    &:hover {
+        transform: scale(1.5);
+        background-color: dimgrey;
+        color: yellow;
+    }
 `;
 const CharacterStats = styled.p`
     text-align: left;
@@ -14,24 +21,22 @@ const CharacterStats = styled.p`
 const CharacterName = styled.h2`
     color: yellow;
     font-weight: bold;
+    text-align: center;
 `;
-// const CardDisplay = styled.div`
-
-// `;
-
+const Categories = styled.big`
+    color: coral;
+`
 
 const CharacterCard = props => {
     return (
         <>
             <CardDisplay key={props.id}>
                 <CharacterName>{`${props.name}`}</CharacterName>
-                <div>
-                    <CharacterStats>{`Gender: ${props.gender}`}</CharacterStats>
-                    <CharacterStats>{`Eye-color: ${props.eyeColor}`}</CharacterStats>
-                    <CharacterStats>{`Hair-color: ${props.hairColor}`}</CharacterStats>
-                    <CharacterStats>{`Height: ${props.height}`}</CharacterStats>
-                    <CharacterStats>{`Weight: ${props.weight}`}</CharacterStats>
-                </div>
+                <CharacterStats><Categories>Gender: </Categories>{`${props.gender}`}</CharacterStats>
+                <CharacterStats><Categories>Eye-color: </Categories>{`${props.eyeColor}`}</CharacterStats>
+                <CharacterStats><Categories>Hair-color: </Categories>{`${props.hairColor}`}</CharacterStats>
+                <CharacterStats><Categories>Height: </Categories>{`${props.height}`}</CharacterStats>
+                <CharacterStats><Categories>Weight: </Categories>{`${props.weight}`}</CharacterStats>
             </CardDisplay>
         </>
     );

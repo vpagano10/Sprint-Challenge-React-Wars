@@ -25,14 +25,19 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+    - React JS is a library that tries to help simplify front end devlopment. React enables the developer to make/modify web pages all while working in JS files. You can even style the reusable components you make in react without having to go through different css files that can get confusing when looking for specific classes or styles. The main draw to react is the ability to write pieces of code called components just one time and reuse them as often as you like to reduce the amount of code you need to have a functioning page.
 
 - [ ] What does it mean to _think_ in react?
+    - To think in react means that your thinking about the different individual pieces/parts/components on a page and taking them apart to then use as you please. If you decide after you make your page that you dont like the placement of a specific part, you can just move the entire section with ease because each piece is its own component of code often in its own js file then exported to the right location.
 
 - [ ] Describe state.
+    - State is where individual components of html and js elements can be stored. State can be modified based on specific user interaction with the page, and will re-render the component to the browser.
 
 - [ ] Describe props.
+    - Props are essentially parameters for components. You can pass through specific props that use data that you might get from an axios call in order to display the data in a manageable way.
 
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+    - Side effects are when a function tries to modify a global variable that it should not be changing. To help avoid this, you can add an empty array [] at the end of the function so that it doesn't continue to re-render the page and change global variables. To sync up specific effects you would put the name of the effect in the array [example] and the page will only re-render or have an effect if that specific named effect occurs.
 
 ## Project Set Up
 
